@@ -9,7 +9,7 @@ Alternatively, you can build a DKMS-based kernel module, for instance by running
 apt-get install zfsutils-linux
 ```
 
-## WireGuard
+<h2 align="center">WireGuard</h2>
 
 Once WireGuard has been compiled, it's time to create the configuration files. Each host should connect to its peers to create a secure network overlay via a tunnel interface called wg0. Let's assume the setup consists of three hosts and each one will get a new VPN IP address in the 10.0.1.1/24 range:
 
@@ -50,4 +50,15 @@ for i in 1 2 3; do
 done
 ```
 
+<h2 align="center">Deploying services</h2>
 
+Services can now be deployed remotely by calling `prowl -f apply <FILE>`. It's also possible to apply multiple files by pointing to a folder, for example, looking through these YAML files:
+
+```sh
+$ ls dashboard/
+deployment.yml  service.yml
+
+$ kubectl apply -f dashboard/
+deployment "kubernetes-dashboard" created
+service "kubernetes-dashboard" created
+```
