@@ -1,4 +1,4 @@
-![documentation](http://getprowl.com/assets/images/documentation.png)
+![documentations](http://getprowl.com/assets/images/documentation.png)
 <h1 align="center">Managing Clusters for Prowl</h1>
 
 With Prowl, in some cases we use Scaleway. Scaleway uses custom Kernel versions which makes the installation process a little more complex. Fortunately, they provide a [shell script](https://github.com/scaleway/kernel-tools#how-to-build-a-custom-kernel-module) to download the required headers without much hassle.
